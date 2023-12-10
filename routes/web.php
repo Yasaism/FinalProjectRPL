@@ -23,4 +23,6 @@ Route::get('/', function () {
 Route::get('/queue-list', [QueueController::class, 'index'])->name('queue.list');
 Route::get('/reservasi', [ReservasiController::class, 'index'])->name('reservasi');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+Route::get('/register/success', [RegisterController::class, 'success'])->name('register.success');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
